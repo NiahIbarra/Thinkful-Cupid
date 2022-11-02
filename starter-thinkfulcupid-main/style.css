@@ -1,0 +1,246 @@
+/* -------  General Styles ------- */
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #6b1a22;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: 400;
+  margin: 0 10px 15px 10px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+p {
+  line-height: 1.5em;
+  margin: 0;
+}
+
+header, section, aside, footer {
+    margin: 0;
+    padding: 20px;
+}
+/* added */
+main {
+  margin: 0;
+}
+/* --- */
+
+/* deleted */
+/* section {
+  padding: 20px;
+} */
+/* --- */
+
+section.alternate-background {
+  background-color: #a35766;
+  color: #ecdbc9;
+}
+
+main img {
+  width: 100%;
+  /* added */
+  margin-bottom: 20px;
+}
+
+/* ---  Groups & Items --- */
+
+.group {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  flex: 50;
+  margin: 10px;
+}
+
+.item-double {
+  flex: 2;
+}
+
+/* -------  Navigation ------- */
+
+header {
+  background-color: #83092e;
+  padding: 20px 20px 0 20px;
+  text-align: center;
+}
+
+.logo {
+  font-family: "Tangerine", cursive;
+  font-size: 72px;
+  color: #ecdbc9;
+  /* added */
+  margin: 0 auto;
+}
+/* added */
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0;
+}
+/* --- */
+header nav ul li {
+  list-style-type: none;
+  /* added */
+  flex: 1 0 10%;
+  text-align: center;
+}
+
+header nav ul li a {
+  color: #ecdbc9;
+  text-decoration: none;
+  /* changed was 0 20px 0 0 */
+  padding: 0 10px 0 10px;
+  /* added */
+  display: block;
+  transition: all ease-in-out .5s;
+}
+
+header nav ul li a:hover {
+  color: #bdbdbd;
+  text-decoration: none;
+  /* added */
+  transform: scale(1.1);
+}
+/* added optional */
+header nav ul li a:active {
+  transform: scale (0.9);
+}
+
+/* -------  Join Form ------- */
+/* added */
+.join-flex-container {
+  display:flex;
+  flex-wrap: wrap;
+  column-gap: 1%;
+}
+.join-item-left,
+.join-item-right {
+  flex: 100%;
+}
+
+.flex-input {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+/* --- */
+form {
+  border: 2px solid #6b1a22;
+  padding: 10px;
+}
+
+form label {
+  font-weight: bold;
+  /* added */
+  flex-basis: 230px;
+}
+
+form select,
+form input {
+  margin-bottom: 20px;
+  width: 180px;
+}
+
+form button {
+  background-color: #83092e;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  padding: 15px;
+  width: 100%;
+}
+/* added */
+form button:hover {
+  background-color: #a35766;
+  color: #fff;
+
+}
+
+/* added */
+/* ------- about / download / blog ------- */
+.flex-container {
+  display:flex;
+  flex-wrap: wrap;
+  column-gap: 2%;
+}
+
+.about-item-left,
+.about-item-mid,
+.about-item-right,
+.download-blog-item-left,
+.download-blog-item-right {
+  flex: 100%;
+}
+
+
+/* -------  Footer ------- */
+
+footer {
+  background-color: #83092e;
+}
+
+footer p {
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* -------  Media Query ------- */
+
+/* all media queries added */
+@media (min-width: 480px){
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  header nav ul {
+    width: auto;
+  }
+
+  .logo {
+    margin: 0 0 0 .3rem;
+  }
+
+  .join-item-left {
+    flex: 59%;
+  }
+  .join-item-right {
+    flex: 40%;
+    align-self: center;
+  }
+
+  .about-item-left,
+  .about-item-mid {
+    flex: 24%;
+  }
+  .about-item-right {
+    flex: 48%;
+  }
+
+  .download-blog-item-left,
+  .download-blog-item-right {
+    flex: 49%;
+  }
+  .download-blog-item-left {
+    align-self: center;
+  }
+}
