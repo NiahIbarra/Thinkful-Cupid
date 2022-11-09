@@ -234,11 +234,14 @@ footer p {
   }
   .about-item-right {
     flex: 48%;
+    align-self: center;
+    margin-top: -1.5em;
   }
 
   .download-blog-item-left,
   .download-blog-item-right {
     flex: 49%;
+    margin-bottom: 1em;
   }
   .download-blog-item-left {
     align-self: center;
