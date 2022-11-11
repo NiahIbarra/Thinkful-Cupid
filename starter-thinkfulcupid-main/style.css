@@ -139,6 +139,7 @@ header nav ul li a:active {
 .flex-input {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   margin-bottom: 10px;
 }
 /* --- */
@@ -217,6 +218,7 @@ footer p {
   }
 
   .logo {
+    font-size: 38px;
     margin: 0 0 0 .3rem;
   }
 
